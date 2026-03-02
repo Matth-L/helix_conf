@@ -6,6 +6,7 @@ rulers = [80, 120]
 cursorline = true
 cursorcolumn = true
 bufferline = "always"
+color-modes = true
 
 [editor.indent-guides]
 render = true
@@ -36,10 +37,11 @@ tabpad = "·"  # Tabs will look like "→···" (depending on tab width)
 ### 
 
 [editor.statusline]
-left = [ "mode", "spinner", "diagnostics" ]
+left = [ "mode", "spinner", "read-only-indicator", "file-modification-indicator" ]
 center = [ "file-name", "separator", "version-control", "separator" ]
-right = [ "position", "position-percentage", "total-line-numbers" ]
-separator = "│"
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
+right = [ "diagnostics", "position", "file-encoding", "file-line-ending", "file-type"]
+
+[editor.statusline.mode]
+insert = "INSERT"
+normal = "NORMAL"
+select = "SELECT"
